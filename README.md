@@ -12,13 +12,13 @@
 | 关卡 | 项目 | 操作空间 | 大白话 | 仓库 |
 |---|---|---|---|---|
 | **第一关** | **P1 语义回响** | 表示空间 | 模型"先在心里想好情绪，再开口说话" | [SemanticEcho](https://github.com/091635Aa/SemanticEcho) |
-| | P2 通用兼容层 | 配置空间 | 换任何模型都自动调好强度，不塌房 | 随 P1 附赠 |
-| **第二关** | **P3 情感潮汐 ETD** | 概率空间 | 采样时把分布"往情绪方向涌"，数学上有界不会崩 | [SemanticEcho-ETD-OpenSource](https://github.com/091635Aa/SemanticEcho-ETD-OpenSource) |
-| **第三关** | **P4 锚点回响 AE** | 嵌入空间 | 用模型自己的"情感词典"给每个词打分，轻推输出 | [SemanticEcho-AnchorEcho](https://github.com/091635Aa/SemanticEcho-AnchorEcho) |
-| **第四关** | **P5 KV 情感共振 KER** | 注意力缓存空间 | 让模型"更注意对话里的情绪"，注意力共振 | [SemanticEcho-KVResonance](https://github.com/091635Aa/SemanticEcho-KVResonance) |
-| **🏆 终极奖励** | 全套独家垄断 + 二次分发权 | 五空间全铺 | 全球唯一能合法转手这套技术的人 | 📧 洽谈 |
+| | P1.5 通用兼容层 | 配置空间 | 换任何模型都自动调好强度，不塌房 | 随 P1 附赠 |
+| **第二关** | **P2.5 情感潮汐 ETD** | 概率空间 | 采样时把分布"往情绪方向涌"，数学上有界不会崩 | [SemanticEcho-ETD-OpenSource](https://github.com/091635Aa/SemanticEcho-ETD-OpenSource) |
+| **第三关** | **P3 锚点回响 AE** | 嵌入空间 | 用模型自己的"情感词典"给每个词打分，轻推输出 | [SemanticEcho-AnchorEcho](https://github.com/091635Aa/SemanticEcho-AnchorEcho) |
+| **第四关** | **P4 KV 情感共振 KER** | 注意力缓存空间 | 让模型"更注意对话里的情绪"，注意力共振 | [SemanticEcho-KVResonance](https://github.com/091635Aa/SemanticEcho-KVResonance) |
+| **🏆 终极奖励** | 全套独家垄断 + 二次分发权 + P5 超融合解码器 UFD（合成方案，一体化全合成 P1+P2+P3+P4，对应 KV 仓库中的超融合解码器） | 五空间全铺 | 全球唯一能合法转手这套技术的人 | 📧 洽谈 |
 
-> **为什么不能跳关**：P5 依赖 P4 的打分表，P4 依赖 P3 的决策器，P3 依赖 P2 的适配，P2 依赖 P1 的经验——每一关都是下一关的必经之路。
+> **为什么不能跳关**：P4(KV) 依赖 P3 的打分表，P3 依赖 P2.5 的决策器，P2.5 依赖 P1.5 的适配，P1.5 依赖 P1 的经验——每一关都是下一关的必经之路。
 
 ---
 
@@ -33,11 +33,11 @@
 **我们的做法（用买菜打比方）**：
 
 - **P1 语义回响** = 让你"先尝一口再说话"。模型先在脑子里想情绪，再开口。
-- **P3 情感潮汐** = 说话时"往情绪方向偏一点"。采样分布乘性重加权，数学上不可能崩。
-- **P4 锚点回响** = 给每个词贴"情绪标签"。用模型自己的词典，给"难过/开心/温柔"打分，轻推输出。
-- **P5 KV 情感共振** = 让模型"盯着你的情绪看"。注意力向对话里的情绪词共振，越说越走心。
+- **P2.5 情感潮汐** = 说话时"往情绪方向偏一点"。采样分布乘性重加权，数学上不可能崩。
+- **P3 锚点回响** = 给每个词贴"情绪标签"。用模型自己的词典，给"难过/开心/温柔"打分，轻推输出。
+- **P4 KV 情感共振** = 让模型"盯着你的情绪看"。注意力向对话里的情绪词共振，越说越走心。
 
-**结果**：1.5B 小模型（比 GPT 小几百倍）在"AI vs 真人"盲评里，P4+P5 双通道 win_rate **0.2667**（反超裸模型 +23%）。挂载后被裁判认成真人的比例显著提升。
+**结果**：1.5B 小模型（比 GPT 小几百倍）在"AI vs 真人"盲评里，P3+P4 双通道 win_rate **0.2667**（反超裸模型 +23%）。挂载后被裁判认成真人的比例显著提升。
 
 **关键**：全程不改模型权重、不重新训练、显存增量不到 4MB、任何开源模型即插即用。
 
@@ -62,14 +62,14 @@
 | 碎片 | 内容 | 大厂永久买断 |
 |---|---|---|
 | 碎片① | P1 语义回响（表示空间） | 3 亿 |
-| 碎片② | P2 通用兼容层（配置空间） | 2.4 亿 |
-| 碎片③ | P3 情感潮汐（概率空间） | 2.7 亿 |
-| 碎片④ | P4 锚点回响（嵌入空间） | 3.9 亿 |
-| 碎片⑤ | P5 KV 情感共振（注意力空间） | 3 亿 |
-| **完全体** | 集齐 5 块碎片合成 | **15 亿** |
+| 碎片② | P1.5 通用兼容层（配置空间） | 2.4 亿 |
+| 碎片③ | P2.5 情感潮汐（概率空间） | 2.7 亿 |
+| 碎片④ | P3 锚点回响（嵌入空间） | 3.9 亿 |
+| 碎片⑤ | P4 KV 情感共振（注意力空间） | 3 亿 |
+| **完全体** | 集齐 5 块碎片合成（P5 超融合解码器 UFD = 一体化全合成 P1+P2+P3+P4 的技术对应） | **15 亿** |
 | **🏆 终极版** | 完全体 + 独家垄断 + 二次分发权 | **30 亿** |
 
-**补差价路径**：P1(3亿) → +P2(2.4亿) → +P3(2.7亿，P1+P2+P3=8.1亿) → +P4(3.9亿，已投入12亿) → +P5(3亿，**完全体15亿**) → +15亿升级**终极版30亿**。
+**补差价路径**：P1(3亿) → +P1.5(2.4亿) → +P2.5(2.7亿，P1+P1.5+P2.5=8.1亿) → +P3(3.9亿，已投入12亿) → +P4(3亿，**完全体15亿**) → +15亿升级**终极版30亿**。
 
 **能卖多少？** 转手卖给腾讯/字节/米哈游，每家收 5-12 亿，卖两三家回本。
 **能用来干嘛？** 下面六个场景全覆盖——情感底座 + 合规入场券 + 赛道定义权 + 全球唯一二次分发权。
@@ -82,9 +82,9 @@
 |---|---|---|
 | [**SemanticEcho-Home**](https://github.com/091635Aa/SemanticEcho-Home) | 总入口 / 导航（本仓库） | 所有人 |
 | [**SemanticEcho**](https://github.com/091635Aa/SemanticEcho) | P1 核心源码 + 实验 | 想跑代码的开发者 |
-| [**SemanticEcho-ETD-OpenSource**](https://github.com/091635Aa/SemanticEcho-ETD-OpenSource) | P3 情感潮汐源码 + 评测 | 概率空间方案 |
-| [**SemanticEcho-AnchorEcho**](https://github.com/091635Aa/SemanticEcho-AnchorEcho) | P4 锚点回响源码 + 评测 | 嵌入空间方案 |
-| [**SemanticEcho-KVResonance**](https://github.com/091635Aa/SemanticEcho-KVResonance) | P5 KV 情感共振源码 + 评测 | 注意力空间方案 |
+| [**SemanticEcho-ETD-OpenSource**](https://github.com/091635Aa/SemanticEcho-ETD-OpenSource) | P2.5 情感潮汐源码 + 评测 | 概率空间方案 |
+| [**SemanticEcho-AnchorEcho**](https://github.com/091635Aa/SemanticEcho-AnchorEcho) | P3 锚点回响源码 + 评测 | 嵌入空间方案 |
+| [**SemanticEcho-KVResonance**](https://github.com/091635Aa/SemanticEcho-KVResonance) | P4 KV 情感共振源码 + 评测 | 注意力空间方案 |
 | [**SemanticEcho-Hub**](https://github.com/091635Aa/SemanticEcho-Hub) | 大白话 + 商业授权价目表 | 想了解/谈授权的人 |
 | [**SemanticEcho-V3**](https://github.com/091635Aa/SemanticEcho-V3) | 生产架构 + API 服务 | 想部署上线的人 |
 | [**1.5B-beats-big-labs**](https://github.com/091635Aa/1.5B-beats-big-labs) | 图灵测试实验报告 + 在线演示 | 想看测试过程的人 |
@@ -98,9 +98,9 @@
 ```
 输入 → 模型逐层前向
    P1: hidden_state 钩子 → 回响池质心 → logits 注入        （表示空间）
-   P3: 采样分布乘性重加权 p' ∝ p^(1-α)·q_emo^α            （概率空间）
-   P4: S[w,k]=cos(W_e[w],e_k) → logits += β·tanh(S@v/T)  （嵌入空间）
-   P5: K[p] *= 1+κ·clip(S[token_p]·v_eff,0,1)            （注意力缓存空间）
+   P2.5: 采样分布乘性重加权 p' ∝ p^(1-α)·q_emo^α          （概率空间）
+   P3: S[w,k]=cos(W_e[w],e_k) → logits += β·tanh(S@v/T)  （嵌入空间）
+   P4: K[p] *= 1+κ·clip(S[token_p]·v_eff,0,1)            （注意力缓存空间）
 → 更像人、更有温度的输出
 ```
 

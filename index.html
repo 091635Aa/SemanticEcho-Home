@@ -71,7 +71,7 @@
     <span class="kicker">语义回响 · Semantic Echo · 总入口</span>
     <h1>让 AI 说话更像人、更有温度</h1>
     <div class="sub">五代推理增强引擎 · 不改权重 · 不重训练 · 即插即用 · 显存增量&lt;4MB<br>
-    1.5B 小模型在「AI vs 真人」盲评中 P4+P5 双通道 win_rate 0.2667，反超裸模型 +23%</div>
+    1.5B 小模型在「AI vs 真人」盲评中 P3+P4 双通道 win_rate 0.2667，反超裸模型 +23%</div>
     <div class="badges">
       <span class="badge">🎮 五关通关制</span>
       <span class="badge">🛰 五空间正交</span>
@@ -83,20 +83,20 @@
   <!-- ══ 五个关卡导航 ══ -->
   <section>
     <h2>🎮 五个关卡：每一关都是下一关的门票</h2>
-    <p class="secsub">不打通前面拿不到后面 —— 想只买 P5？不行。P5 依赖 P4 打分表，P4 依赖 P3 决策器，P3 依赖 P2 适配，P2 依赖 P1 经验。</p>
+    <p class="secsub">不打通前面拿不到后面 —— 想只买 P4(KV)？不行。P4(KV) 依赖 P3 打分表，P3 依赖 P2.5 决策器，P2.5 依赖 P1.5 适配，P1.5 依赖 P1 经验。</p>
     <div class="grid2">
       <div class="card"><span class="tag">第一关 · 表示空间</span><h3>P1 语义回响</h3>
         <p>模型"先在心里想好情绪，再开口说话"。hidden_state 钩子 → 回响池质心 → logits 注入。</p><p>→ <a href="https://github.com/091635Aa/SemanticEcho">SemanticEcho</a></p></div>
-      <div class="card"><span class="tag">随 P1 附赠 · 配置空间</span><h3>P2 通用兼容层</h3>
+      <div class="card"><span class="tag">随 P1 附赠 · 配置空间</span><h3>P1.5 通用兼容层</h3>
         <p>换任何模型都自动调好强度，25 配置全可控、不塌房（Qwen/Qwen3/Gemma/Phi/SmolLM × fp16/4bit）。</p><p>→ 随 <a href="https://github.com/091635Aa/SemanticEcho">SemanticEcho</a> 附赠</p></div>
-      <div class="card"><span class="tag">第二关 · 概率空间</span><h3>P3 情感潮汐 ETD</h3>
+      <div class="card"><span class="tag">第二关 · 概率空间</span><h3>P2.5 情感潮汐 ETD</h3>
         <p>采样时把分布"往情绪方向涌"：乘性重加权 p' ∝ p^(1-α)·q_emo^α，数学上有界不坍缩，闭源 API 也能用。</p><p>→ <a href="https://github.com/091635Aa/SemanticEcho-ETD-OpenSource">SemanticEcho-ETD-OpenSource</a></p></div>
-      <div class="card"><span class="tag">第三关 · 嵌入空间</span><h3>P4 锚点回响 AE</h3>
+      <div class="card"><span class="tag">第三关 · 嵌入空间</span><h3>P3 锚点回响 AE</h3>
         <p>用模型自己的"情感词典"给全词表打分（1.8MB），轻推输出。HeartBench +21.7% · TuringBench 人似度 +200%。</p><p>→ <a href="https://github.com/091635Aa/SemanticEcho-AnchorEcho">SemanticEcho-AnchorEcho</a></p></div>
-      <div class="card"><span class="tag">第四关 · 注意力缓存空间</span><h3>P5 KV 情感共振 KER</h3>
-        <p>让模型"盯着你的情绪看"：KV 缓存情感调制，注意力向情绪共振。P4+P5 双通道 win_rate 0.2667 全场最高。</p><p>→ <a href="https://github.com/091635Aa/SemanticEcho-KVResonance">SemanticEcho-KVResonance</a></p></div>
-      <div class="card"><span class="tag">🏆 终极奖励</span><h3>全套独家垄断 + 二次分发权</h3>
-        <p>五空间全铺 + 二次分发权 + 改名权 + 未来全部迭代 —— 全球唯一能合法转手这套技术的人。</p><p>→ 📧 <a href="mailto:DYPUBG2025@QQ.COM">DYPUBG2025@QQ.COM</a></p></div>
+      <div class="card"><span class="tag">第四关 · 注意力缓存空间</span><h3>P4 KV 情感共振 KER</h3>
+        <p>让模型"盯着你的情绪看"：KV 缓存情感调制，注意力向情绪共振。P3+P4 双通道 win_rate 0.2667 全场最高。</p><p>→ <a href="https://github.com/091635Aa/SemanticEcho-KVResonance">SemanticEcho-KVResonance</a></p></div>
+      <div class="card"><span class="tag">🏆 终极奖励</span><h3>全套独家垄断 + 二次分发权 + P5 超融合解码器 UFD</h3>
+        <p>五空间全铺 + P5 超融合解码器（合成方案，一体化全合成 P1+P2+P3+P4，对应 KV 仓库中的超融合解码器）+ 二次分发权 + 改名权 + 未来全部迭代 —— 全球唯一能合法转手这套技术的人。</p><p>→ 📧 <a href="mailto:DYPUBG2025@QQ.COM">DYPUBG2025@QQ.COM</a></p></div>
     </div>
   </section>
 
@@ -107,18 +107,18 @@
     <table class="price-table">
       <tr><th>碎片</th><th>内容</th><th>大厂永久买断</th></tr>
       <tr><td>碎片①</td><td>P1 语义回响（表示空间）</td><td class="price">3 亿</td></tr>
-      <tr><td>碎片②</td><td>P2 通用兼容层（配置空间）</td><td class="price">2.4 亿</td></tr>
-      <tr><td>碎片③</td><td>P3 情感潮汐（概率空间）</td><td class="price">2.7 亿</td></tr>
-      <tr><td>碎片④</td><td>P4 锚点回响（嵌入空间）</td><td class="price">3.9 亿</td></tr>
-      <tr><td>碎片⑤</td><td>P5 KV 情感共振（注意力空间）</td><td class="price">3 亿</td></tr>
-      <tr><td><b>完全体</b></td><td>集齐 5 块碎片合成 · 五空间全铺</td><td class="price">15 亿</td></tr>
+      <tr><td>碎片②</td><td>P1.5 通用兼容层（配置空间）</td><td class="price">2.4 亿</td></tr>
+      <tr><td>碎片③</td><td>P2.5 情感潮汐（概率空间）</td><td class="price">2.7 亿</td></tr>
+      <tr><td>碎片④</td><td>P3 锚点回响（嵌入空间）</td><td class="price">3.9 亿</td></tr>
+      <tr><td>碎片⑤</td><td>P4 KV 情感共振（注意力空间）</td><td class="price">3 亿</td></tr>
+      <tr><td><b>完全体</b></td><td>集齐 5 块碎片合成（P5 超融合解码器 UFD = 一体化全合成 P1+P2+P3+P4 的技术对应）· 五空间全铺</td><td class="price">15 亿</td></tr>
       <tr><td><b>🏆 终极版</b></td><td>完全体 + 独家垄断 + 二次分发权 · 全球唯一合法分销</td><td class="price">30 亿</td></tr>
     </table>
     <div class="note">
-      📊 <b>补差价路径</b>：P1(3亿) → +P2(2.4亿) → +P3(2.7亿，P1+P2+P3=8.1亿) → +P4(3.9亿，已投入12亿) → +P5(3亿，<b>完全体15亿</b>) → +15亿升级<b>终极版30亿</b>。<br>
-      🎮 <b>集齐碎片，合成完全体</b>：每一块都是下一块的"门票"，不跳关、不单卖顶层；想只买 P5？不行——P5 依赖 P4 打分表，P4 依赖 P3 决策器，P3 依赖 P2 适配，P2 依赖 P1 经验。<br>
+      📊 <b>补差价路径</b>：P1(3亿) → +P1.5(2.4亿) → +P2.5(2.7亿，P1+P1.5+P2.5=8.1亿) → +P3(3.9亿，已投入12亿) → +P4(3亿，<b>完全体15亿</b>) → +15亿升级<b>终极版30亿</b>。<br>
+      🎮 <b>集齐碎片，合成完全体</b>：每一块都是下一块的"门票"，不跳关、不单卖顶层；想只买 P4(KV)？不行——P4(KV) 依赖 P3 打分表，P3 依赖 P2.5 决策器，P2.5 依赖 P1.5 适配，P1.5 依赖 P1 经验。<br>
       💎 <b>五层护城河</b>：对方要替代，需在五个完全不同操作空间同时找到替代品——现实不存在。<br>
-      ⚡ <b>单通道无效、融合通道有效</b>：P5 单通道 0.1167 → P4+P5 双通道 0.2667 —— 必须集齐碎片才能兑现完整效果。<br>
+      ⚡ <b>单通道无效、融合通道有效</b>：P4(KV) 单通道 0.1167 → P3+P4 双通道 0.2667 —— 必须集齐碎片才能兑现完整效果。<br>
       🏢 <b>厂商优惠</b>：米哈游 -20 万 / 阿里云 -10 万 / 其他大厂 -10 万（碎片①-⑤ 与完全体适用）；30 亿终极版不适用、不砍价。<br>
       ⏰ <b>12 小时 5 折</b>：报价后 12 小时内未回复 → 作者自动按任意价位打 5 折；12 小时内回复 → 按原价底价。
     </div>
@@ -142,8 +142,8 @@
   <section>
     <h2>🗣️ 大白话 30 秒</h2>
     <div class="note">AI 说话没人味，是因为把情绪信息当垃圾扔了。<b>语义回响把情绪捡回来</b>：
-    P1 让它"先想好情绪再开口"，P3 让它"说话往情绪方向偏"，
-    P4 给每个词贴"情绪标签"轻推输出，P5 让注意力"盯着你的情绪看"。
+    P1 让它"先想好情绪再开口"，P2.5 让它"说话往情绪方向偏"，
+    P3 给每个词贴"情绪标签"轻推输出，P4 让注意力"盯着你的情绪看"。
     全程不改权重、不重训练、显存增量不到 4MB —— 1.5B 小模型就能像真人一样说话。</div>
   </section>
 
