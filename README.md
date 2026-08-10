@@ -93,6 +93,8 @@
 
 **给大厂的完整展示页**（行业前景 / 方案总览 / 核心数据 / 实验记录 / 价格说明）：https://091635aa.github.io/SemanticEcho-Home/for-big-labs.html
 
+**工程师评估版**（变化对比 / 稳定度 / 量化测试 / 评分系统）：https://091635aa.github.io/SemanticEcho-Home/for-engineers.html
+
 ---
 
 ## 🧠 技术速览（30 秒版）
