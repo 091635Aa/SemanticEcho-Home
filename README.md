@@ -95,6 +95,8 @@
 
 **工程师评估版**（变化对比 / 稳定度 / 量化测试 / 评分系统）：https://091635aa.github.io/SemanticEcho-Home/for-engineers.html
 
+**产品经理版**（为什么30亿>15亿 / 商业化路线 / 能卖什么 / 智能体迁移玩法 / 9.9定价阶梯）：https://091635aa.github.io/SemanticEcho-Home/for-pm.html
+
 ---
 
 ## 🧠 技术速览（30 秒版）
