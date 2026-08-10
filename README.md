@@ -91,6 +91,8 @@
 
 **在线演示**：https://091635aa.github.io/SemanticEcho-Home/
 
+**给大厂的完整展示页**（行业前景 / 方案总览 / 核心数据 / 实验记录 / 价格说明）：https://091635aa.github.io/SemanticEcho-Home/for-big-labs.html
+
 ---
 
 ## 🧠 技术速览（30 秒版）
