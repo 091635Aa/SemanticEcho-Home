@@ -105,6 +105,7 @@
 | [**SemanticEcho-ETD-OpenSource**](https://github.com/091635Aa/SemanticEcho-ETD-OpenSource) | P2.5 情感潮汐源码 + 评测 | 概率空间方案 |
 | [**SemanticEcho-AnchorEcho**](https://github.com/091635Aa/SemanticEcho-AnchorEcho) | P3 锚点回响源码 + 评测 | 嵌入空间方案 |
 | [**SemanticEcho-KVResonance**](https://github.com/091635Aa/SemanticEcho-KVResonance) | P4 KV 情感共振源码 + 评测 | 注意力空间方案 |
+| [**SemanticEcho-UFD**](https://github.com/091635Aa/SemanticEcho-UFD) | **P5 超融合解码器（五空间机制级融合，2026 全流程 7 模式综合 0.6255 全场最高）** | 全部方案 |
 | [**SemanticEcho-Hub**](https://github.com/091635Aa/SemanticEcho-Hub) | 大白话 + 商业授权价目表 | 想了解/谈授权的人 |
 | [**SemanticEcho-V3**](https://github.com/091635Aa/SemanticEcho-V3) | 生产架构 + API 服务 | 想部署上线的人 |
 | [**1.5B-beats-big-labs**](https://github.com/091635Aa/1.5B-beats-big-labs) | 图灵测试实验报告 + 在线演示 | 想看测试过程的人 |
