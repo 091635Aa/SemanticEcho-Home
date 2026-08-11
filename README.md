@@ -133,5 +133,5 @@
 
 ---
 
-*本作品遵循 CC BY-NC-SA 4.0 许可（详见各仓库 LICENSE）。版权所有 © 2026 邓斯键。*
+*本作品遵循 CC BY-NC-SA 4.0 许可（详见各仓库 LICENSE）。版权所有 © 2026 邓同学。*
 *联系：DYPUBG2025@QQ.COM · GitHub: 091635Aa*
