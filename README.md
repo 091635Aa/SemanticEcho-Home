@@ -21,9 +21,10 @@
 | P2.5_潮汐 | 0.4982 | 0.3219 | 0.2967 | 0.9333 | 0.8887 | 0.5878 |
 | P3_锚点回响 | 0.4949 | 0.3075 | 0.3300 | 0.8000 | 0.8500 | 0.5565 |
 | P4_KV共振 | 0.4720 | 0.3141 | 0.2767 | 0.9333 | 0.8778 | 0.5748 |
-| **P5_超融合** | 0.4909 | 0.3203 | **0.5067** | 0.9333 | 0.8762 | **0.6255** |
+| P5_超融合 | 0.4909 | 0.3203 | 0.5067 | 0.9333 | 0.8762 | 0.6255 |
+| **P6_情感导演 EDD** | **0.4898** | **0.5217** | **0.7067** | 0.9333 | **0.8713** | **0.7046** |
 
-> **P5 超融合（UFD）综合全场最高 0.6255**（裸 0.5800）；TuringBench 人似度 0.9333（裸 0.5333，+75%）；LLM-Judge 胜率 0.5067 全场第一；全部模式峰值显存 = 裸模型 3.78GB（**零显存增量**）。
+> **🏆 P6 情感导演 EDD 综合全场最高 0.7046**（超 P5 0.6255 **+12.6%**）；LLM-Judge 胜率 0.7067 断崖第一（裸 0.4100）；多模型泛化 Qwen3-1.7B **0.833** / Qwen2.5-3B **0.75** / 1.5B +233%；零权重解码期插件，开销 <7%。P5 超融合综合 0.6255 居次席。
 
 ---
 
@@ -36,6 +37,8 @@
 | **第二关** | **P2.5 情感潮汐 ETD** | 概率空间 | 采样时把分布"往情绪方向涌"，数学上有界不会崩 | [SemanticEcho-ETD-OpenSource](https://github.com/091635Aa/SemanticEcho-ETD-OpenSource) |
 | **第三关** | **P3 锚点回响 AE** | 嵌入空间 | 用模型自己的"情感词典"给每个词打分，轻推输出 | [SemanticEcho-AnchorEcho](https://github.com/091635Aa/SemanticEcho-AnchorEcho) |
 | **第四关** | **P4 KV 情感共振 KER** | 注意力缓存空间 | 让模型"更注意对话里的情绪"，注意力共振 | [SemanticEcho-KVResonance](https://github.com/091635Aa/SemanticEcho-KVResonance) |
+| **第五关** | **P6 情感导演 EDD** | 解码期插件 | 三位导演（TAD/PIS/OQC）× 五通道，零权重即插即用，**全家族冠军 0.7046** | [SemanticEcho-EDD-OpenSource](https://github.com/091635Aa/SemanticEcho-EDD-OpenSource) |
+| | P6 LoRA 外挂×旁路由 | 权重+路由 | 训练态写适配器 + 多候选情感选优（训练态路线，迭代中） | 随 P1P6 合体仓库 |
 | **🏆 终极奖励** | 全套独家垄断 + 二次分发权 + P5 超融合解码器 UFD（合成方案，一体化全合成 P1+P2+P3+P4，对应 KV 仓库中的超融合解码器） | 五空间全铺 | 全球唯一能合法转手这套技术的人 | 📧 洽谈 |
 
 > **为什么不能跳关**：P4(KV) 依赖 P3 的打分表，P3 依赖 P2.5 的决策器，P2.5 依赖 P1.5 的适配，P1.5 依赖 P1 的经验——每一关都是下一关的必经之路。
@@ -100,12 +103,14 @@
 
 | 仓库 | 内容 | 适合谁 |
 |---|---|---|
+| [**SemanticEcho-P1P6**](https://github.com/091635Aa/SemanticEcho-P1P6) | **P1~P6 超大合体仓库**：全部方案文档（优缺点/场景/跑分/边际效益/效应/测试）+ 全部实验数据 + 全部源码，P6 着重 | 所有人（首选入口） |
 | [**SemanticEcho-Home**](https://github.com/091635Aa/SemanticEcho-Home) | 总入口 / 导航（本仓库） | 所有人 |
 | [**SemanticEcho**](https://github.com/091635Aa/SemanticEcho) | P1 核心源码 + 实验 | 想跑代码的开发者 |
 | [**SemanticEcho-ETD-OpenSource**](https://github.com/091635Aa/SemanticEcho-ETD-OpenSource) | P2.5 情感潮汐源码 + 评测 | 概率空间方案 |
 | [**SemanticEcho-AnchorEcho**](https://github.com/091635Aa/SemanticEcho-AnchorEcho) | P3 锚点回响源码 + 评测 | 嵌入空间方案 |
 | [**SemanticEcho-KVResonance**](https://github.com/091635Aa/SemanticEcho-KVResonance) | P4 KV 情感共振源码 + 评测 | 注意力空间方案 |
-| [**SemanticEcho-UFD**](https://github.com/091635Aa/SemanticEcho-UFD) | **P5 超融合解码器（五空间机制级融合，2026 全流程 7 模式综合 0.6255 全场最高）** | 全部方案 |
+| [**SemanticEcho-UFD**](https://github.com/091635Aa/SemanticEcho-UFD) | **P5 超融合解码器（五空间机制级融合，2026 全流程 7 模式综合 0.6255 全场次席）** | 全部方案 |
+| [**SemanticEcho-EDD-OpenSource**](https://github.com/091635Aa/SemanticEcho-EDD-OpenSource) | **P6 情感导演解码（零权重插件，综合 0.7046 全家族冠军）** | 想直接用的开发者 |
 | [**SemanticEcho-Hub**](https://github.com/091635Aa/SemanticEcho-Hub) | 大白话 + 商业授权价目表 | 想了解/谈授权的人 |
 | [**SemanticEcho-V3**](https://github.com/091635Aa/SemanticEcho-V3) | 生产架构 + API 服务 | 想部署上线的人 |
 | [**1.5B-beats-big-labs**](https://github.com/091635Aa/1.5B-beats-big-labs) | 图灵测试实验报告 + 在线演示 | 想看测试过程的人 |
